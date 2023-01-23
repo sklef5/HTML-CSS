@@ -1,0 +1,36 @@
+.social-link {
+    display: flex;
+    justify-content: center;
+}
+.team-items--social-link{
+    padding: 0 32px 30px;
+}
+.social-link__item:not(:last-child) {
+    margin-right: 10px;
+}
+.social-link__btn {
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    color: $hover-btn;
+    background-color: $back-color;
+
+    transition: background-color $trans, color $trans;
+    
+    &:focus,
+    &:hover {
+    color: $back-color;
+    background-color: $hover-color;
+    cursor: pointer;
+}
+}
+.social-link__svg {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    fill: currentColor;
+}

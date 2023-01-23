@@ -1,0 +1,48 @@
+.customers-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    // font-size: 36px;
+}
+.customers-lists {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+    
+    gap: 30px;
+    justify-content: center;
+}
+// .customers-lists_item:not(:last-child){
+//     margin-right: 30px;
+// }
+
+.customers-lists__btn {
+    display: flex;
+    align-items: center;
+    width: 210px;
+    height: 92px;
+    border: 1px solid $btn-border;
+    border-radius: 4px;
+    background-color: $back-color;
+    color: $hover-btn;
+    @include desktop{
+         width: 170px;
+    }
+
+    transition: border-color $trans, color $trans;
+    
+    &:hover,
+    &:focus{
+    color: $hover-color;
+    border-color: $hover-color;
+    cursor: pointer;
+    }
+}
+.customers-lists__svg {
+    margin: auto;
+    fill: currentColor;
+}

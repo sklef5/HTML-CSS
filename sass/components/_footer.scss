@@ -1,0 +1,183 @@
+footer {
+    background: $mainback-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@include desktop{
+.container.footer{
+     display: flex;
+     align-items: baseline;
+}}
+.footer-contact,
+.footer-social,
+.footer-send{
+    display: block;
+    margin-bottom: 60px;
+    // display: inline-block; 
+}
+
+.footer-send{
+    @include tablet{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    }
+    @include desktop{
+
+        margin: 0;
+        display: inline-block; 
+}}
+@include tablet{
+    .footer-block{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+}
+.footer-contact{
+   @include desktop{
+     margin-right: 70px;
+}
+}
+
+.logo--footer{
+    display: block;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:$hover-color
+}
+.logo__span--footer {
+    color: $back-color;
+}
+.address {
+    margin-top: 20px;
+}
+
+.address__items {
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+}
+
+.address__map {
+    color: $back-color;
+
+    transition: color $trans;
+
+    &:hover,
+    &:focus {
+    color: $hover-color;
+}
+}
+
+.address_link {
+    color: $address-color;
+    transition: color $trans;
+
+    &:hover,
+    &:focus{
+    color: $hover-color;
+}
+}
+
+.address_item:not(:last-child) {
+    margin-bottom: 8px;
+}
+/** social block **/
+.footer-social{
+    @include desktop{
+         margin-right: 93px;
+}
+}
+.footer-social__title,
+.footer-send__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $back-color;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+    @include desktop{
+        text-align: left ;
+    }
+}
+
+.footer-social--btn{
+    background-color: $hover-btn2;
+    color:$back-color;
+}
+
+
+/** mail block **/
+
+
+.mail-form__input{
+    width: 100%; 
+    height: 50px;
+    padding: 15px 16px;
+    margin-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    @include desktop{
+        width: 358px;
+        margin-right: 12px;}
+
+    color: $address-color;
+    border: 1px solid $border-color2;
+    filter: drop-shadow(0px 4px 4px $shadow-4);
+    border-radius: 4px;
+    background-color: $mainback-color;
+}
+
+.mail-form__btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:none;
+    @include desktop{
+         margin: 0;}
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    padding: 10px 28px;
+    color: $back-color;
+
+    background-color: $hover-color;
+    box-shadow: 0px 4px 4px $shadow-4;
+    border-radius: 4px;
+
+    transition: backgroud-color $trans;
+
+    &:hover,
+    &:focus{
+    cursor: pointer;
+    background-color: $mainback2-color;
+}
+}
+
+.mail-form__svg{
+    margin-left: 10px;
+    fill: $back-color;
+    vertical-align: middle;
+}

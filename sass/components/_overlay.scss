@@ -1,0 +1,92 @@
+.overlay {
+    @include min-mobile{
+        padding-top: 13%;
+        padding-bottom: 13%;
+    }
+    @include mobile{
+    padding-top: 118px;
+    padding-bottom: 118px;}
+
+    @include desktop{
+        max-width: 1600px;
+        padding-bottom: 200px;
+        padding-top: 200px;}
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: $grad, url("../images/overlay/M_Header_img.jpg");
+    @include retina {
+        &{
+            background-image: $grad, url("../images/overlay/M_Header_img@2x.jpg");
+        }
+    }
+    @include tablet{
+        background-image:  $grad, url("../images/overlay/T_Header_img.jpg");
+        @include retina {
+            &{
+                background-image:$grad, url("../images/overlay/T_Header_img@2x.jpg");
+            }
+        }
+    }
+    @include desktop{
+        background-image:$grad,  url("../images/overlay/D_Header_img.jpg");
+        @include retina {
+            &{
+                background-image:$grad,  url("../images/overlay/D_Header_img@2x.jpg");
+            }
+        }
+    }
+}
+
+
+.overlay__title {
+    @media  screen and (max-width:1200px) {
+    max-width: 360px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.26;}
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @include desktop{
+    width: 699px;
+    font-size: 44px;
+    line-height: 1.36;}
+
+    color: $back-color;
+
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overlay__btn {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px $shadow-4;
+
+    background: $hover-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 1.875;
+    color: $back-color;
+
+    padding: 10px 32px;
+
+    transition: background-color $trans;
+    
+    &:hover,
+    &:focus {
+    cursor: pointer;
+    background-color: $mainback2-color;
+}
+}
