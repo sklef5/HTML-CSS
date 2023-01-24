@@ -45,6 +45,9 @@
     flex-wrap: wrap;
     margin-top: 48px;
     gap: 30px;
+    @include max-mobile{
+    justify-content: center;
+    }
 }
 .portfolio__meta {
     border-bottom: 1px solid $border-color1;

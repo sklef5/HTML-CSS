@@ -1,38 +1,47 @@
-@mixin min-mobile{
-    @media screen and (min-width: 400px){
-        @content;
-    }
-}
-@mixin mobile{
-    @media screen and (min-width: 480px){
-        @content;
-    }
-}
-@mixin max-mobile{
-    @media screen and (max-width: 767px){
+@mixin min-mobile {
+    @media screen and (min-width: 400px) {
         @content;
     }
 }
 
-@mixin tablet{
-    @media screen and (min-width: 768px)  and (max-width:1199px){
-        @content;
-    }
-}
-@mixin tablet_plus{
-    @media screen and (min-width: 768px){
-        @content;
-    }
-}
-@mixin desktop{
-    @media screen and (min-width: 1200px){
+@mixin mobile {
+    @media screen and (min-width: 480px) {
         @content;
     }
 }
 
-@mixin retina {@media (min-device-pixel-ratio: 2),
+@mixin max-mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        @content;
+    }
+}
+
+@mixin tablet_plus {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin retina {
+
+    @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {@content}}
+    (min-resolution: 2dppx) {
+        @content
+    }
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -51,12 +60,17 @@ li {
     list-style: none;
 }
 
-ul, li {
+ul,
+li {
     margin: 0;
     padding: 0;
 }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
 }
@@ -64,19 +78,23 @@ p, h1, h2, h3, h4 {
 /********* total  properties *******************/
 
 .container {
-     margin-left: auto;
-     margin-right: auto;
-     padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
 
-@include desktop{
-    width: 1200px;}
+    @include desktop {
+        width: 1200px;
+    }
 }
 
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
-    // padding-top: 94px;
-    // padding-bottom: 94px;
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .img {

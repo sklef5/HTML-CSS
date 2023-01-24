@@ -41,9 +41,13 @@ footer {
     font-weight: 700;
     font-size: 24px;
     line-height: 1.167;
-    text-align: center;
+
     letter-spacing: 0.03em;
-    color: $hover-color
+    color: $hover-color;
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
 }
 
 .logo__span--footer {
@@ -61,7 +65,9 @@ footer {
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    text-align: center;
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
 }
 
 .address__map {
@@ -159,10 +165,12 @@ footer {
 }
 
 .mail-form__btn {
-    @media screen and (max-width:199px) {
+    @media screen and (max-width:1199px) {
         display: block;
         margin-left: auto;
-        margin-right: auto;}
+        margin-right: auto;
+    }
+
     border: none;
 
     font-weight: 700;
