@@ -106,7 +106,7 @@ h4 {
     height: 100vh;
     background-color: #Fff;
     padding: 48px 40px;
-    z-index: 100;
+    z-index: 10;
   }
 }
 @media screen and (min-width: 768px) {
@@ -124,7 +124,7 @@ h4 {
     right: 15px;
     border: none;
     padding: 0;
-    z-index: 999;
+    z-index: 12;
     background-color: #Fff;
   }
   .mobile-btn.is-open {
@@ -489,12 +489,22 @@ h4 {
   z-index: 99;
   top: 50%;
   left: 50%;
-  width: 450px;
+  width: 100%;
   height: 609px;
   padding: 40px;
   background-color: #Fff;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -574,6 +584,11 @@ h4 {
   padding: 12px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 480px) {
+  .modal-form__textarea {
+    width: 370px;
+  }
+}
 .modal-form__textarea:focus-within, .modal-form__textarea:not(:placeholder-shown) {
   border-color: #2196F3;
 }
@@ -581,8 +596,8 @@ h4 {
 .modal-form__label--check {
   display: block;
   position: relative;
-  justify-content: center;
   margin-bottom: 30px;
+  padding-left: 15px;
 }
 
 .modal-form__text {
