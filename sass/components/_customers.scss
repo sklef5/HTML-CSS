@@ -5,20 +5,21 @@
     text-align: center;
     letter-spacing: 0.03em;
 
-    // font-size: 36px;
+    @include desktop {
+        font-size: 36px;
+        line-height: 1.167;
+    }
 }
+
 .customers-lists {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 50px;
-    
+
     gap: 30px;
     justify-content: center;
 }
-// .customers-lists_item:not(:last-child){
-//     margin-right: 30px;
-// }
 
 .customers-lists__btn {
     display: flex;
@@ -29,19 +30,22 @@
     border-radius: 4px;
     background-color: $back-color;
     color: $hover-btn;
-    @include desktop{
-         width: 170px;
+
+    @include desktop {
+        width: 170px;
     }
 
-    transition: border-color $trans, color $trans;
-    
+    transition: border-color $trans,
+    color $trans;
+
     &:hover,
-    &:focus{
-    color: $hover-color;
-    border-color: $hover-color;
-    cursor: pointer;
+    &:focus {
+        color: $hover-color;
+        border-color: $hover-color;
+        cursor: pointer;
     }
 }
+
 .customers-lists__svg {
     margin: auto;
     fill: currentColor;

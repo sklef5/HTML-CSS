@@ -3,45 +3,38 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-@include desktop{
-.container.footer{
-     display: flex;
-     align-items: baseline;
-}}
-.footer-contact,
-.footer-social,
-.footer-send{
-    display: block;
-    margin-bottom: 60px;
-    // display: inline-block; 
+
+@include desktop {
+    .container.footer {
+        display: flex;
+        align-items: baseline;
+    }
 }
 
-.footer-send{
-    @include tablet{
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    }
-    @include desktop{
+@media screen and (max-width:1199px) {
 
-        margin: 0;
-        display: inline-block; 
-}}
-@include tablet{
-    .footer-block{
+    .footer-contact,
+    .footer-social,
+    .footer-send {
+        margin-bottom: 60px;
+    }
+}
+
+.footer-block {
+    @include tablet_plus {
         display: flex;
         justify-content: space-around;
         align-items: baseline;
     }
 }
-.footer-contact{
-   @include desktop{
-     margin-right: 70px;
-}
+
+.footer-contact {
+    @include desktop {
+        margin-right: 70px;
+    }
 }
 
-.logo--footer{
+.logo--footer {
     display: block;
     font-family: 'Raleway';
     font-style: normal;
@@ -50,11 +43,13 @@ footer {
     line-height: 1.167;
     text-align: center;
     letter-spacing: 0.03em;
-    color:$hover-color
+    color: $hover-color
 }
+
 .logo__span--footer {
     color: $back-color;
 }
+
 .address {
     margin-top: 20px;
 }
@@ -76,8 +71,8 @@ footer {
 
     &:hover,
     &:focus {
-    color: $hover-color;
-}
+        color: $hover-color;
+    }
 }
 
 .address_link {
@@ -85,20 +80,22 @@ footer {
     transition: color $trans;
 
     &:hover,
-    &:focus{
-    color: $hover-color;
-}
+    &:focus {
+        color: $hover-color;
+    }
 }
 
 .address_item:not(:last-child) {
     margin-bottom: 8px;
 }
+
 /** social block **/
-.footer-social{
-    @include desktop{
-         margin-right: 93px;
+.footer-social {
+    @include desktop {
+        margin-right: 93px;
+    }
 }
-}
+
 .footer-social__title,
 .footer-send__title {
     font-weight: 700;
@@ -111,22 +108,35 @@ footer {
     margin-bottom: 20px;
 
     text-align: center;
-    @include desktop{
-        text-align: left ;
+
+    @include desktop {
+        text-align: left;
     }
 }
 
-.footer-social--btn{
+.footer-social--btn {
     background-color: $hover-btn2;
-    color:$back-color;
+    color: $back-color;
 }
 
-
 /** mail block **/
+.footer-send {
+    @include desktop {
 
+        margin: 0;
+        display: inline-block;
+    }
 
-.mail-form__input{
-    width: 100%; 
+    @include tablet {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+}
+
+.mail-form__input {
+    width: 100%;
     height: 50px;
     padding: 15px 16px;
     margin-bottom: 20px;
@@ -136,9 +146,10 @@ footer {
     line-height: 1.25;
     letter-spacing: 0.03em;
 
-    @include desktop{
+    @include desktop {
         width: 358px;
-        margin-right: 12px;}
+        margin-right: 12px;
+    }
 
     color: $address-color;
     border: 1px solid $border-color2;
@@ -147,19 +158,19 @@ footer {
     background-color: $mainback-color;
 }
 
-.mail-form__btn{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border:none;
-    @include desktop{
-         margin: 0;}
+.mail-form__btn {
+    @media screen and (max-width:199px) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;}
+    border: none;
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     text-align: center;
     letter-spacing: 0.06em;
-    
+
     padding: 10px 28px;
     color: $back-color;
 
@@ -167,16 +178,20 @@ footer {
     box-shadow: 0px 4px 4px $shadow-4;
     border-radius: 4px;
 
+    @include desktop {
+        margin: 0;
+    }
+
     transition: backgroud-color $trans;
 
     &:hover,
-    &:focus{
-    cursor: pointer;
-    background-color: $mainback2-color;
-}
+    &:focus {
+        cursor: pointer;
+        background-color: $mainback2-color;
+    }
 }
 
-.mail-form__svg{
+.mail-form__svg {
     margin-left: 10px;
     fill: $back-color;
     vertical-align: middle;
