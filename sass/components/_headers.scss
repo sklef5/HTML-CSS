@@ -271,24 +271,18 @@
         letter-spacing: 0.02em;
         color: $hover-color;
 
-        @include mobile {
-            font-size: 18px;
-        }
 
         &:not(:last-child)::after {
             content: '';
             border: 1px solid rgba(33, 33, 33, 0.2);
             transform: rotate(90deg);
-            margin-right: 2px;
-            margin-left: 2px;
 
-            @include mobile {
-                margin-right: 10px;
-                margin-left: 10px;
-            }
+            margin-right: 10px;
+            margin-left: 10px;
         }
     }
 }
+
 
 @include tablet_plus {
     .header-social {
