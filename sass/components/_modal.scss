@@ -1,5 +1,6 @@
 .backdrop {
     position: fixed;
+    z-index: 20;
     top: 0;
     left: 0;
     height: 100%;
@@ -139,9 +140,25 @@
 }
 
 .modal-form__textarea {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.01em;
+
+    @include desktop{
+    font-size: 12px;
+    line-height: 1.176;
+    }
     width: 100%;    
     @include mobile {
         width: 370px;
+    }
+    @include desktop{
+        width: 448px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.167;
+        letter-spacing: 0.01em;
     }
     height: 120px;
     border: 1px solid $form-field;
@@ -149,6 +166,9 @@
     resize: none;
     outline: none;
 
+
+
+    color: $textarea-color;
     padding: 12px 16px;
 
     transition: border-color $trans;
@@ -163,12 +183,13 @@
     display: block;
     position: relative;
     margin-bottom: 30px;
-    padding-left: 15px;
+
 }
 
 .modal-form__text {
     font-weight: 400;
     font-size: 12px;
+    padding-left: 12px;
 
     @include desktop {
         font-size: 14px;
@@ -231,8 +252,19 @@
 
 .modal-form__svg--notcheck {
     position: absolute;
-    top: 4px;
-    left: 0;
+    top: 1px;
+    left: 20px;
+    @include mobile{
+        top: 1px;
+        left: 6px;
+    }
+    @include tablet{
+        top: 2px;
+        left: 6px;}
+
+    @include desktop{
+        top: 3px;
+        left: 17px;}
     opacity: 1;
     transition: opacity $trans;
 
@@ -243,8 +275,20 @@
 
 .modal-form__svg--check {
     position: absolute;
-    top: 4px;
-    left: 0;
+        top: 1px;
+    left: 20px;
+    @include mobile{
+        top: 1px;
+        left: 6px;
+    }
+    @include tablet{
+        top: 2px;
+        left: 6px;}
+
+    @include desktop{
+        top: 3px;
+        left: 17px;}
+
     opacity: 0;
 
     transition: opacity $trans;

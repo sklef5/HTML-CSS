@@ -106,7 +106,7 @@ footer {
 .footer-send__title {
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.142;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $back-color;
@@ -117,6 +117,7 @@ footer {
 
     @include desktop {
         text-align: left;
+
     }
 }
 
@@ -155,6 +156,7 @@ footer {
     @include desktop {
         width: 358px;
         margin-right: 12px;
+        margin-bottom: 0;
     }
 
     color: $address-color;

@@ -448,6 +448,7 @@ h4 {
 
 .backdrop {
   position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   height: 100%;
@@ -575,18 +576,38 @@ h4 {
 }
 
 .modal-form__textarea {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.01em;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
   outline: none;
+  color: rgba(117, 117, 117, 0.5);
   padding: 12px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__textarea {
+    font-size: 12px;
+    line-height: 1.176;
+  }
 }
 @media screen and (min-width: 480px) {
   .modal-form__textarea {
     width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__textarea {
+    width: 448px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
   }
 }
 .modal-form__textarea:focus-within, .modal-form__textarea:not(:placeholder-shown) {
@@ -597,12 +618,12 @@ h4 {
   display: block;
   position: relative;
   margin-bottom: 30px;
-  padding-left: 15px;
 }
 
 .modal-form__text {
   font-weight: 400;
   font-size: 12px;
+  padding-left: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
@@ -656,10 +677,28 @@ h4 {
 
 .modal-form__svg--notcheck {
   position: absolute;
-  top: 4px;
-  left: 0;
+  top: 1px;
+  left: 20px;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__svg--notcheck {
+    top: 1px;
+    left: 6px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal-form__svg--notcheck {
+    top: 2px;
+    left: 6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__svg--notcheck {
+    top: 3px;
+    left: 17px;
+  }
 }
 .modal-form__checkbox:checked ~ .modal-form__svg--notcheck {
   opacity: 0;
@@ -667,10 +706,28 @@ h4 {
 
 .modal-form__svg--check {
   position: absolute;
-  top: 4px;
-  left: 0;
+  top: 1px;
+  left: 20px;
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__svg--check {
+    top: 1px;
+    left: 6px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal-form__svg--check {
+    top: 2px;
+    left: 6px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__svg--check {
+    top: 3px;
+    left: 17px;
+  }
 }
 .modal-form__checkbox:checked + .modal-form__svg--check {
   opacity: 1;
@@ -944,7 +1001,7 @@ h4 {
   display: flex;
   align-items: center;
   width: calc((100vw - 60px) / 2);
-  max-width: 250px;
+  max-width: 226px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -1177,7 +1234,7 @@ footer {
 .footer-send__title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #Fff;
@@ -1231,6 +1288,7 @@ footer {
   .mail-form__input {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
